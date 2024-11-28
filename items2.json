@@ -1,7 +1,7 @@
 {
     "A": {
         "now-chr": [],
-        "always-chr" : [
+        "always" : [
             [
                 "./img/A/A01.png",
                 "A01",
@@ -31,7 +31,7 @@
     },
     "B": {
         "now-chr": [],
-        "always-chr" : [
+        "always" : [
             [
                 "./img/B/B01.png",
                 "B01",
@@ -56,7 +56,7 @@
     },
     "C": {
         "now-chr": [],
-        "always-chr" : [
+        "always" : [
             [
                 "./img/C/C01.png",
                 "C01",
@@ -81,7 +81,7 @@
     },
     "D":{
         "now-chr": [],
-        "always-chr" : [
+        "always" : [
             [
                 "./img/D/D01.png",
                 "D01",
@@ -111,7 +111,7 @@
     },
     "E":{
         "now-chr": [],
-        "always-chr" : [
+        "always" : [
             [
                 "./img/E/E01.png",
                 "E01",
@@ -136,7 +136,7 @@
     },
     "F":{
         "now-chr": [],
-        "always-chr" : [
+        "always" : [
             [
                 "./img/F/F01.png",
                 "F01",
