@@ -147,7 +147,7 @@ td {
     animation:rotate 3s linear infinite;
 }
 footer{
-    position:absolute;
+    position:fixed;
     color:#808080;
     bottom:0;
     width:100%;
