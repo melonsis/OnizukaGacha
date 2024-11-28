@@ -2,6 +2,7 @@
 var chr = document.getElementById("chr");
 var arm = document.getElementById("arm");
 var nov = document.getElementById("nov");
+var current_pool_name = " "
 //切换卡池
 function pool(id) {
     pool1 = document.getElementById("pool1");
@@ -348,36 +349,34 @@ $(function() {
             rs = modi_action(poolname);
             if (poolname == 'A') {
                 AtbMain = "#CAtbMain";
-                //R5tbMain = "#CR5tbMain";
-                //R4tbMain = "#CR4tbMain";
                 id = 1;
                 gachalog['A']['c'] = gachalog['A']['c'] + 1;
                 num = gachalog['A']['c'];
-            }else if ($('#pool2').css("color") == "#FFFFFF") {
+            }else if (poolname == 'B') {
                 AtbMain = "#CBtbMain";
                 id = 2;
                 gachalog['B']['c'] = gachalog['B']['c'] + 1;
                 num = gachalog['B']['c'];
             }
-            else if ($('#pool3').css("color") == "#FFFFFF") {
+            else if (poolname == 'C') {
                 AtbMain = "#CCtbMain";
                 id = 3;
                 gachalog['C']['c'] = gachalog['C']['c'] + 1;
                 num = gachalog['C']['c'];
             } 
-            else if ($('#pool4').css("color") == "#FFFFFF") {
+            else if (poolname == 'D') {
                 AtbMain = "#CDtbMain";
                 id = 4;
                 gachalog['D']['c'] = gachalog['D']['c'] + 1;
                 num = gachalog['D']['c'];
             } 
-            else if ($('#pool5').css("color") == "#FFFFFF") {
+            else if (poolname == 'E') {
                 AtbMain = "#CEtbMain";
                 id = 5;
                 gachalog['E']['c'] = gachalog['E']['c'] + 1;
                 num = gachalog['E']['c'];
             } 
-            else if ($('#pool6').css("color") == "#FFFFFF") {
+            else if (poolname == 'F') {
                 AtbMain = "#CFtbMain";
                 id = 6;
                 gachalog['F']['c'] = gachalog['F']['c'] + 1;
@@ -502,13 +501,24 @@ $(function() {
     $("button[name=three]").on('click', function() {
         if ($('#loading').css("display") == "block") {
             return;
-        } else if ($('#chr').css("display") == "block") {
-            poolname = 'chr';
-        } else if ($('#arm').css("display") == "block") {
-            poolname = 'arm';
-        } else if ($('#nov').css("display") == "block") {
-            poolname = 'nov';
+        } else if ($('#pool1').css("color") == "#FFFFFF") {
+            poolname = 'A';
         }
+        else if ($('#pool2').css("color") == "#FFFFFF") {
+            poolname = 'B';
+        } 
+        else if ($('#pool3').css("color") == "#FFFFFF") {
+            poolname = 'C';
+        } 
+        else if ($('#pool4').css("color") == "#FFFFFF") {
+            poolname = 'D';
+        } 
+        else if ($('#pool5').css("color") == "#FFFFFF") {
+            poolname = 'E';
+        } 
+        else if ($('#pool6').css("color") == "#FFFFFF") {
+            poolname = 'F';
+        } 
         gacha(poolname, 3);
     });
 });
