@@ -329,7 +329,7 @@ $(function() {
         i = 1;
         while (i <= times) {
             rs = modi_action(poolname);
-            if ($('#pool1').css("color") == "#FFFFFF") {
+            if ($('#pool1').style("color") == "#FFFFFF") {
                 AtbMain = "#CAtbMain";
                 //R5tbMain = "#CR5tbMain";
                 //R4tbMain = "#CR4tbMain";
