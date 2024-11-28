@@ -146,3 +146,18 @@ td {
     -o-animation:rotate 3s linear infinite;
     animation:rotate 3s linear infinite;
 }
+footer{
+    position:absolute;
+    color:#808080;
+    bottom:0;
+    width:100%;
+    height:100px;
+    line-height:100px;
+    text-align:center;
+}
+body{
+    background-image: url('https://pancake.zzmelon.com/share/67487ee27fd88/bg.jpg'); /* 图片路径 */
+    background-size: cover; /* 拉伸图片以覆盖整个背景 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    background-position: center; /* 图片居中对齐 */
+}
