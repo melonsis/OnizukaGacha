@@ -329,14 +329,44 @@ $(function() {
         i = 1;
         while (i <= times) {
             rs = modi_action(poolname);
-            if ($('#chr').css("display") == "block") {
+            if ($('#pool1').css("color") == "#FFFFFF") {
                 AtbMain = "#CAtbMain";
                 //R5tbMain = "#CR5tbMain";
                 //R4tbMain = "#CR4tbMain";
                 id = 1;
                 gachalog['A']['c'] = gachalog['A']['c'] + 1;
                 num = gachalog['A']['c'];
+            }else if ($('#pool2').css("color") == "#FFFFFF") {
+                AtbMain = "#CBtbMain";
+                id = 2;
+                gachalog['B']['c'] = gachalog['B']['c'] + 1;
+                num = gachalog['B']['c'];
+            }
+            else if ($('#pool3').css("color") == "#FFFFFF") {
+                AtbMain = "#CCtbMain";
+                id = 3;
+                gachalog['C']['c'] = gachalog['C']['c'] + 1;
+                num = gachalog['C']['c'];
             } 
+            else if ($('#pool4').css("color") == "#FFFFFF") {
+                AtbMain = "#CDtbMain";
+                id = 4;
+                gachalog['D']['c'] = gachalog['D']['c'] + 1;
+                num = gachalog['D']['c'];
+            } 
+            else if ($('#pool5').css("color") == "#FFFFFF") {
+                AtbMain = "#CEtbMain";
+                id = 5;
+                gachalog['E']['c'] = gachalog['E']['c'] + 1;
+                num = gachalog['E']['c'];
+            } 
+            else if ($('#pool6').css("color") == "#FFFFFF") {
+                AtbMain = "#CFtbMain";
+                id = 6;
+                gachalog['F']['c'] = gachalog['F']['c'] + 1;
+                num = gachalog['F']['c'];
+            } 
+
             $(AtbMain).after("<tr><td>" + num + "</td><td>" + rs.rank + "</td><td style='text-align:left'>" + rs.img + " " + rs.name + "</td></tr>");
             $.fn.setValue(id, "without");
             i++;
@@ -448,7 +478,7 @@ $(function() {
         else if ($('#pool6').css("color") == "#FFFFFF") {
             poolname = 'F';
         } 
-        
+
         gacha(poolname, 1);
     });
     //三连
