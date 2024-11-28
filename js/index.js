@@ -9,54 +9,33 @@ function pool(id) {
     pool3 = document.getElementById("pool3");
     pool4 = document.getElementById("pool4");
     pool5 = document.getElementById("pool5");
-    if (chr.style.display == "block") {
-        all = document.getElementById("Call-table");
-        r5 = document.getElementById("Cr5-table");
-        r4 = document.getElementById("Cr4-table");
-    } else if (arm.style.display == "block") {
-        all = document.getElementById("Aall-table");
-        r5 = document.getElementById("Ar5-table");
-        r4 = document.getElementById("Ar4-table");
-    } else if (nov.style.display == "block") {
-        all = document.getElementById("Nall-table");
-        r5 = document.getElementById("Nr5-table");
-        r4 = document.getElementById("Nr4-table");
-    }
-    if (all.style.display == "block") {
-        showid = 1;
-    } else if (r5.style.display == "block") {
-        showid = 2;
-    } else if (r4.style.display == "block") {
-        showid = 3;
-    }
-    
+    pool6 = document.getElementById("pool6");
+    all = document.getElementById("Call-table");
+
     if (id == 1) {
         pool1.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
         pool2.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool3.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
-        chr.style.display = "block";
-        arm.style.display = "none";
-        nov.style.display = "none";
+        pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+
     } else if (id == 2) {
         pool2.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
         pool3.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool1.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
-        arm.style.display = "block";
-        nov.style.display = "none";
-        chr.style.display = "none";
+        pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+
     } else if (id == 3) {
         pool3.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
         pool1.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool2.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
-        nov.style.display = "block";
-        chr.style.display = "none";
-        arm.style.display = "none";
+        pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+
     }
     else if (id == 4) {
         pool4.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
@@ -64,9 +43,8 @@ function pool(id) {
         pool2.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool3.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
-        nov.style.display = "block";
-        chr.style.display = "none";
-        arm.style.display = "none";
+        pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+
     }
     else if (id == 5) {
         pool5.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
@@ -74,14 +52,23 @@ function pool(id) {
         pool2.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool3.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
-        nov.style.display = "block";
-        chr.style.display = "none";
-        arm.style.display = "none";
+        pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+
     }
-    show(showid);
-    $().setValue(id, "with");
+    else if (id == 6) {
+        pool6.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
+        pool1.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool2.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool3.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+
+    }
+    //show(showid);
+    $().setValue(id, "without");
 }
 //切换显示表格内容
+/*
 function show(id) {
     show1 = document.getElementById("show1");
     show2 = document.getElementById("show2");
@@ -146,29 +133,30 @@ function undopool(name) {
     undo.style.display = "none";
     document.getElementById(name + "radio").checked = false;
 }
+*/
 //jQuery部分
 $(function() {
     //初始化数据记录全局变量
-    var CR5num = 0;
-    var CR4num = 0;
-    var AR5num = 0;
-    var AR4num = 0;
-    var NR5num = 0;
-    var NR4num = 0;
-    var gachalog = {};
+    //var CR5num = 0;
+    //var CR4num = 0;
+    //var AR5num = 0;
+    //var AR4num = 0;
+    //var NR5num = 0;
+    //var NR4num = 0;
+    //var gachalog = {};
     gachalog['chr'] = {};
     gachalog['arm'] = {};
     gachalog['nov'] = {};
     for (var key in gachalog) {
         gachalog[key]['c'] = 0;
         gachalog[key]['r5c'] = 0;
-        gachalog[key]['choice'] = "";
-        gachalog[key]['r5times'] = 0;
+        //gachalog[key]['choice'] = "";
+        //gachalog[key]['r5times'] = 0;
     }
     //获取items.json包含的卡池数据
     var itemsdata = $.ajax({
         type: "get",
-        url: "items.json",
+        url: "items2.json",
         async: false,
         dataType: 'json'
     });
@@ -287,67 +275,66 @@ $(function() {
         result.name = crs[1];
         return(result);
     }
+
+    function modi_action(poolname) {
+        let info = gachalog[poolname];
+
+        info['cx'] = info['c'] + 1;
+        count = info['cx'];
+
+        if (poolname == 'A' && items.A['now-chr'].length != 0){
+            crs = items.A['now-chr'][Math.floor(Math.random() * items.A['now-chr'].length)];
+        }else{
+            crs = items.A['always'][Math.floor(Math.random() * items.A['always'].length)];
+        }
+        if (poolname == 'B' && items.A['now-chr'].length != 0){
+            crs = items.B['now-chr'][Math.floor(Math.random() * items.B['now-chr'].length)];
+        }else{
+            crs = items.B['always'][Math.floor(Math.random() * items.B['always'].length)];
+        }
+        if (poolname == 'C' && items.C['now-chr'].length != 0){
+            crs = items.C['now-chr'][Math.floor(Math.random() * items.C['now-chr'].length)];
+        }else{
+            crs = items.C['always'][Math.floor(Math.random() * items.C['always'].length)];
+        }
+        if (poolname == 'D' && items.D['now-chr'].length != 0){
+            crs = items.D['now-chr'][Math.floor(Math.random() * items.D['now-chr'].length)];
+        }else{
+            crs = items.D['always'][Math.floor(Math.random() * items.D['always'].length)];
+        }
+        if (poolname == 'E' && items.E['now-chr'].length != 0){
+            crs = items.E['now-chr'][Math.floor(Math.random() * items.E['now-chr'].length)];
+        }else{
+            crs = items.E['always'][Math.floor(Math.random() * items.E['always'].length)];
+        }
+        if (poolname == 'F' && items.F['now-chr'].length != 0){
+            crs = items.F['now-chr'][Math.floor(Math.random() * items.F['now-chr'].length)];
+        }else{
+            crs = items.F['always'][Math.floor(Math.random() * items.F['always'].length)];
+        }
+
+        rank = crs[2];
+        var result = [];
+        result.rank = rank;
+        result.img = "<div><img src=\"" + crs[0] + "\" style='hight:40px;width:40px' align='absmiddle'/>";
+        result.name = crs[1];
+        return(result);
+    }
     //向action()提交具体的抽卡请求，记录抽卡结果的同时，将抽卡结果呈现在用户界面
     function gacha(poolname, times) {
         $('#loading').css('display', 'block');
         i = 1;
         while (i <= times) {
-            rs = action(poolname);
+            rs = modi_action(poolname);
             if ($('#chr').css("display") == "block") {
                 AtbMain = "#CAtbMain";
-                R5tbMain = "#CR5tbMain";
-                R4tbMain = "#CR4tbMain";
+                //R5tbMain = "#CR5tbMain";
+                //R4tbMain = "#CR4tbMain";
                 id = 1;
                 gachalog['chr']['c'] = gachalog['chr']['c'] + 1;
                 num = gachalog['chr']['c'];
-            } else if ($('#arm').css("display") == "block") {
-                AtbMain = "#AAtbMain";
-                R5tbMain = "#AR5tbMain";
-                R4tbMain = "#AR4tbMain";
-                id = 2;
-                gachalog['arm']['c'] = gachalog['arm']['c'] + 1;
-                num = gachalog['arm']['c'];
-            } else if ($('#nov').css("display") == "block") {
-                AtbMain = "#NAtbMain";
-                R5tbMain = "#NR5tbMain";
-                R4tbMain = "#NR4tbMain";
-                id = 3;
-                gachalog['nov']['c'] = gachalog['nov']['c'] + 1;
-                num = gachalog['nov']['c'];
-            }
+            } 
             $(AtbMain).after("<tr><td>" + num + "</td><td>" + rs.rank + "</td><td style='text-align:left'>" + rs.img + " " + rs.name + "</td></tr>");
-            if (rs.rank == "5星") {
-                $(R5tbMain).after("<tr><td>" + num + "</td><td>" + rs.rank + "</td><td style='text-align:left'>" + rs.img + " " + rs.name + "</td></tr>");
-                if ($('#chr').css("display") == "block") {
-                    gachalog['chr']['r5c'] = gachalog['chr']['c'];
-                    if (rs.name == gachalog['chr']['choice'] || gachalog['chr']['choice'] == "") {
-                        gachalog['chr']['r5times'] = 0;
-                    } else {
-                        gachalog['chr']['r5times'] = gachalog['chr']['r5times'] + 1;
-                    }
-                    CR5num = CR5num + 1;
-                } else if ($('#arm').css("display") == "block") {
-                    gachalog['arm']['r5c'] = gachalog['arm']['c'];
-                    if (rs.name == gachalog['arm']['choice'] || gachalog['arm']['choice'] == "") {
-                        gachalog['arm']['r5times'] = 0;
-                    } else {
-                        gachalog['arm']['r5times'] = gachalog['arm']['r5times'] + 1;
-                    }
-                    AR5num = AR5num + 1;
-                } else if ($('#nov').css("display") == "block") {
-                    gachalog['nov']['r5c'] = gachalog['nov']['c'];
-                    NR5num = NR5num + 1;
-                }
-            } else if (rs.rank == "4星") {
-                $(R4tbMain).after("<tr><td>" + num + "</td><td>" + rs.rank + "</td><td style='text-align:left'>" + rs.img + " " + rs.name + "</td></tr>");
-                if ($('#chr').css("display") == "block") {
-                    CR4num = CR4num + 1;
-                } else if ($('#arm').css("display") == "block") {
-                    AR4num = AR4num + 1;
-                } else if ($('#nov').css("display") == "block") {
-                    NR4num = NR4num + 1;
-                }
-            }
             $.fn.setValue(id, "without");
             i++;
         }
@@ -356,80 +343,70 @@ $(function() {
     //更新抽卡数据（通过$().setValue提供原生JS调用）
     $.fn.setValue = function(id, option) {
         if (id == 1) {
-            poolname = 'chr';
-            flootnum = 90;
-            R5num = CR5num;
-            R4num = CR4num;
+            poolname = 'A';
         } else if (id == 2) {
-            poolname = 'arm';
-            flootnum = 80;
-            R5num = AR5num;
-            R4num = AR4num;
+            poolname = 'B';
         } else if (id == 3) {
-            poolname = 'nov';
-            flootnum = 90;
-            R5num = NR5num;
-            R4num = NR4num;
+            poolname = 'C';
         }
+        else if (id == 4) {
+            poolname = 'D';
+        }
+        else if (id == 5) {
+            poolname = 'E';
+        }
+        else if (id == 6) {
+            poolname = 'F';
+        }
+        
         $("[name='times']").html(gachalog[poolname]['c']);
-        $("[name='spend']").html(gachalog[poolname]['c'] * 160);
-        $("[name='r3num']").html(gachalog[poolname]['c'] - R5num - R4num);
-        $("[name='r3per']").html(((gachalog[poolname]['c'] - R5num - R4num) / gachalog[poolname]['c'] * 100).toFixed(2));
-        $("[name='r4num']").html(R4num);
-        $("[name='r4per']").html((R4num / gachalog[poolname]['c'] * 100).toFixed(2));
-        $("[name='r5num']").html(R5num);
-        $("[name='r5per']").html((R5num / gachalog[poolname]['c'] * 100).toFixed(2));
-        $("[name='floot']").html(flootnum - (gachalog[poolname]['c'] - gachalog[poolname]['r5c']));
-        if (id != 3) {
-            $("[name='up']").css('display', 'block');
-            //可选，是否刷新UP物品数据
-            if (option != "without") {
-                rs = askup(poolname);
-                var upr5text = "";
-                var upr4text = "";
-                for (var r5id in rs.upr5) {
-                    if (rs.upr5.length > 1) {
-                        upr5tag = "<input type='radio' id='" + rs.upr5[r5id] + "radio' name='choice' onclick=\"setpool('" + rs.upr5[r5id] + "');\"> ";
-                    } else {
-                        upr5tag = "";
-                    }
-                    upr5text = upr5text + upr5tag + rs.upr5[r5id] + " ";
-                    gachalog[poolname]['upr5'] = rs.upr5;
-                }
-                for (var r4id in rs.upr4) {
-                    upr4text = upr4text + rs.upr4[r4id] + " ";
-                    gachalog[poolname]['upr4'] = rs.upr4;
-                }
+        $("[name='up']").css('display', 'block');
+        //可选，是否刷新UP物品数据
+        if (option != "without") {
+            rs = askup(poolname);
+            var upr5text = "";
+            var upr4text = "";
+            for (var r5id in rs.upr5) {
                 if (rs.upr5.length > 1) {
-                    if (poolname == 'chr') {
-                        upr5text = "(点击单选框选择角色)<br>" + upr5text + "<button id='undo' onclick='' style='display:none'>撤销</button>";
-                    } else if (poolname == 'arm') {
-                        upr5text = "(点击单选框设置定轨)<br>" + upr5text + "<button id='undo' onclick='' style='display:none'>撤销</button><span id='upr5note' style='display:none;color:#FF0000'><br>警告：撤销或修改定轨后会重置记录!</span>";
-                    }
+                    upr5tag = "<input type='radio' id='" + rs.upr5[r5id] + "radio' name='choice' onclick=\"setpool('" + rs.upr5[r5id] + "');\"> ";
+                } else {
+                    upr5tag = "";
                 }
-                $("[name='upr5']").html(upr5text);
-                $("[name='upr4']").html(upr4text);
-                if (rs.upr5.length > 1 && gachalog[poolname]['choice'] != "") {
-                    if (poolname == 'arm') {
-                        $('#upr5note').css('display', 'inline');
-                    }
-                    $('#' + gachalog[poolname]['choice'] + 'radio').attr('checked', true);
-                    $('#undo').css('display', 'inline');
-                }
-                if (rs.upr5.length == 0) {
-                    $("[name='upr5']").html("无UP");
-                }
-                if (rs.upr4.length == 0) {
-                    $("[name='upr4']").html("无UP");
-                }
-                if (rs.upr5.length == 1) {
-                    $.fn.choice(rs.upr5[0], poolname);
+                upr5text = upr5text + upr5tag + rs.upr5[r5id] + " ";
+                gachalog[poolname]['upr5'] = rs.upr5;
+            }
+            for (var r4id in rs.upr4) {
+                upr4text = upr4text + rs.upr4[r4id] + " ";
+                gachalog[poolname]['upr4'] = rs.upr4;
+            }
+            if (rs.upr5.length > 1) {
+                if (poolname == 'chr') {
+                    upr5text = "(点击单选框选择角色)<br>" + upr5text + "<button id='undo' onclick='' style='display:none'>撤销</button>";
+                } else if (poolname == 'arm') {
+                    upr5text = "(点击单选框设置定轨)<br>" + upr5text + "<button id='undo' onclick='' style='display:none'>撤销</button><span id='upr5note' style='display:none;color:#FF0000'><br>警告：撤销或修改定轨后会重置记录!</span>";
                 }
             }
-        } else {
-            $("[name='up']").css('display', 'none');
+            $("[name='upr5']").html(upr5text);
+            $("[name='upr4']").html(upr4text);
+            if (rs.upr5.length > 1 && gachalog[poolname]['choice'] != "") {
+                if (poolname == 'arm') {
+                    $('#upr5note').css('display', 'inline');
+                }
+                $('#' + gachalog[poolname]['choice'] + 'radio').attr('checked', true);
+                $('#undo').css('display', 'inline');
+            }
+            if (rs.upr5.length == 0) {
+                $("[name='upr5']").html("无UP");
+            }
+            if (rs.upr4.length == 0) {
+                $("[name='upr4']").html("无UP");
+            }
+            if (rs.upr5.length == 1) {
+                $.fn.choice(rs.upr5[0], poolname);
+            }
         }
     }
+    
     //存储设置的UP角色或武器定轨到全局变量（通过$().choice供原生JS调用）
     $.fn.choice = function(name, poolname) {
         if (poolname == 'arm' && gachalog['arm']['choice'] != "") {
@@ -449,8 +426,8 @@ $(function() {
     $("button[name=only]").on('click', function() {
         if ($('#loading').css("display") == "block") {
             return;
-        } else if ($('#chr').css("display") == "block") {
-            poolname = 'chr';
+        } else if ($('#pool1').css("color") == "#FFFFFF") {
+            poolname = 'A';
         } else if ($('#arm').css("display") == "block") {
             poolname = 'arm';
         } else if ($('#nov').css("display") == "block") {
