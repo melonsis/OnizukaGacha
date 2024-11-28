@@ -284,42 +284,58 @@ $(function() {
 
         info['cx'] = info['c'] + 1;
         count = info['cx'];
-
-        if (poolname == 'A' && items.A['now-chr'].length != 0){
-            crs = items.A['now-chr'][Math.floor(Math.random() * items.A['now-chr'].length)];
-        }else{
-            crs = items.A['always'][Math.floor(Math.random() * items.A['always'].length)];
+        switch(poolname){
+            case 'A':
+                if (items.A['now-chr'].length != 0){
+                    crs = items.A['now-chr'][Math.floor(Math.random() * items.A['now-chr'].length)];
+                }
+                else{
+                    crs = items.A['always'][Math.floor(Math.random() * items.A['always'].length)];
+                }
+            break;
+            case 'B':        
+                if (items.B['now-chr'].length != 0){
+                    crs = items.B['now-chr'][Math.floor(Math.random() * items.B['now-chr'].length)];
+                }else{
+                    crs = items.B['always'][Math.floor(Math.random() * items.B['always'].length)];
+                }
+            break;
+            case 'C':
+                if (items.C['now-chr'].length != 0){
+                    crs = items.C['now-chr'][Math.floor(Math.random() * items.C['now-chr'].length)];
+                }else{
+                    crs = items.C['always'][Math.floor(Math.random() * items.C['always'].length)];
+                }
+            break;
+            case 'D':
+                if (items.D['now-chr'].length != 0){
+                    crs = items.D['now-chr'][Math.floor(Math.random() * items.D['now-chr'].length)];
+                }else{
+                    crs = items.D['always'][Math.floor(Math.random() * items.D['always'].length)];
+                }
+            case 'E':
+                if (items.E['now-chr'].length != 0){
+                    crs = items.E['now-chr'][Math.floor(Math.random() * items.E['now-chr'].length)];
+                }else{
+                    crs = items.E['always'][Math.floor(Math.random() * items.E['always'].length)];
+                }
+                break;
+            case 'F':
+                if (items.F['now-chr'].length != 0){
+                    crs = items.F['now-chr'][Math.floor(Math.random() * items.F['now-chr'].length)];
+                }else{
+                    crs = items.F['always'][Math.floor(Math.random() * items.F['always'].length)];
+                }
+                break;
+            default:
+                console.error("未知 poolname: ", poolname);
+                return null;
         }
-        if (poolname == 'B' && items.B['now-chr'].length != 0){
-            crs = items.B['now-chr'][Math.floor(Math.random() * items.B['now-chr'].length)];
-        }else{
-            crs = items.B['always'][Math.floor(Math.random() * items.B['always'].length)];
-        }
-        if (poolname == 'C' && items.C['now-chr'].length != 0){
-            crs = items.C['now-chr'][Math.floor(Math.random() * items.C['now-chr'].length)];
-        }else{
-            crs = items.C['always'][Math.floor(Math.random() * items.C['always'].length)];
-        }
-        if (poolname == 'D' && items.D['now-chr'].length != 0){
-            crs = items.D['now-chr'][Math.floor(Math.random() * items.D['now-chr'].length)];
-        }else{
-            crs = items.D['always'][Math.floor(Math.random() * items.D['always'].length)];
-        }
-        if (poolname == 'E' && items.E['now-chr'].length != 0){
-            crs = items.E['now-chr'][Math.floor(Math.random() * items.E['now-chr'].length)];
-        }else{
-            crs = items.E['always'][Math.floor(Math.random() * items.E['always'].length)];
-        }
-        if (poolname == 'F' && items.F['now-chr'].length != 0){
-            crs = items.F['now-chr'][Math.floor(Math.random() * items.F['now-chr'].length)];
-        }else{
-            crs = items.F['always'][Math.floor(Math.random() * items.F['always'].length)];
-        }
-
+        
         rank = crs[2];
         var result = [];
         result.rank = rank;
-        result.img = "<div><img src=\"" + crs[0] + "\" style='hight:40px;width:40px' align='absmiddle'/>";
+        result.img = "<div><img src=\"" + crs[0] + "\" style='hight:150px;width:150px' align='absmiddle'/>";
         result.name = crs[1];
         return(result);
     }
