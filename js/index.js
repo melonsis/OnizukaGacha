@@ -313,6 +313,7 @@ $(function() {
                 }else{
                     crs = items.D['always'][Math.floor(Math.random() * items.D['always'].length)];
                 }
+                break;
             case 'E':
                 if (items.E['now-chr'].length != 0){
                     crs = items.E['now-chr'][Math.floor(Math.random() * items.E['now-chr'].length)];
