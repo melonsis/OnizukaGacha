@@ -7,6 +7,8 @@ function pool(id) {
     pool1 = document.getElementById("pool1");
     pool2 = document.getElementById("pool2");
     pool3 = document.getElementById("pool3");
+    pool4 = document.getElementById("pool4");
+    pool5 = document.getElementById("pool5");
     if (chr.style.display == "block") {
         all = document.getElementById("Call-table");
         r5 = document.getElementById("Cr5-table");
@@ -27,10 +29,13 @@ function pool(id) {
     } else if (r4.style.display == "block") {
         showid = 3;
     }
+    
     if (id == 1) {
         pool1.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
         pool2.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool3.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         chr.style.display = "block";
         arm.style.display = "none";
         nov.style.display = "none";
@@ -38,6 +43,8 @@ function pool(id) {
         pool2.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
         pool3.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool1.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         arm.style.display = "block";
         nov.style.display = "none";
         chr.style.display = "none";
@@ -45,6 +52,28 @@ function pool(id) {
         pool3.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
         pool1.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool2.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        nov.style.display = "block";
+        chr.style.display = "none";
+        arm.style.display = "none";
+    }
+    else if (id == 4) {
+        pool4.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
+        pool1.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool2.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool3.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        nov.style.display = "block";
+        chr.style.display = "none";
+        arm.style.display = "none";
+    }
+    else if (id == 5) {
+        pool5.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
+        pool1.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool2.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool3.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         nov.style.display = "block";
         chr.style.display = "none";
         arm.style.display = "none";
@@ -429,8 +458,8 @@ $(function() {
         }
         gacha(poolname, 1);
     });
-    //十连
-    $("button[name=ten]").on('click', function() {
+    //三连
+    $("button[name=three]").on('click', function() {
         if ($('#loading').css("display") == "block") {
             return;
         } else if ($('#chr').css("display") == "block") {
@@ -440,6 +469,6 @@ $(function() {
         } else if ($('#nov').css("display") == "block") {
             poolname = 'nov';
         }
-        gacha(poolname, 10);
+        gacha(poolname, 3);
     });
 });

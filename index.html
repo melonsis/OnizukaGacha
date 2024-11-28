@@ -10,12 +10,21 @@
 <body onload="start();">
     <div id='overlay' class='overlay'>
         <div class='text-bg'>
-            <h3>鬼塚の书包盲盒抽取工具&nbsp;&nbsp;<a href="https://github.com/0803QwQ/gitool-gacha-simulator/blob/main/README.md#%E5%85%B7%E4%BD%93%E6%A6%82%E7%8E%87" target="_blank" style="color:#1E83FF">概率公示</a></h3>
-            <a href="JavaScript:pool(1);"><button id="pool1" name="pool">卡池A</button></a>
-            <a href="JavaScript:pool(2);"><button id="pool2" name="pool" style="border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E">卡池B</button></a>
-            <a href="JavaScript:pool(3);"><button id="pool3" name="pool" style="border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E">卡池C</button></a><br>
-            <button id="gacha" name="only">单抽</button>
-            <button id="gacha" name="ten">三连</button><br>
+            <h3 style="text-align: center;">鬼塚の书包盲盒抽取工具</h3>
+            <a href="JavaScript:pool(1);"><button id="pool1" name="pool">盲盒A</button></a>
+            <a href="JavaScript:pool(2);"><button id="pool2" name="pool" style="border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E">盲盒B</button></a>
+            <a href="JavaScript:pool(3);"><button id="pool3" name="pool" style="border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E">盲盒C</button></a>
+            <a href="JavaScript:pool(4);"><button id="pool4" name="pool" style="border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E">盲盒D</button></a>
+            <a href="JavaScript:pool(5);"><button id="pool5" name="pool" style="border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E">盲盒E</button></a><br>
+
+            <div style="display: flex; justify-content: center; gap: 5px;">
+                <button id="gacha" name="only">单抽</button>
+                <button id="gacha" name="three">三连</button>
+            </div>
+
+            <!-- <button id="gacha" name="only">单抽</button>
+            <button id="gacha" name="three">三连</button><br> -->
+
             <a href="JavaScript:show(1);"><button id="show1" name="show">全部</button></a>
             <a href="JavaScript:show(2);"><button id="show2" name="show" style="border-width:2px;background:rgba(255,255,255,0.8);color:#32EB00">仅看5星</button></a>
             <a href="JavaScript:show(3);"><button id="show3" name="show" style="border-width:2px;background:rgba(255,255,255,0.8);color:#32EB00">仅看4星</button></a><br>
