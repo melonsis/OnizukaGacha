@@ -6,7 +6,7 @@ var tbC = document.getElementById("tbC");
 var tbD = document.getElementById("tbD");
 var tbE = document.getElementById("tbE");
 var tbF = document.getElementById("tbF");
-var current_pool_name = " "
+var current_pool_name = 'A'
 //切换卡池
 function pool(id) {
     pool1 = document.getElementById("pool1");
