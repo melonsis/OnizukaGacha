@@ -1,7 +1,11 @@
 //获取抽卡数据表格元素
-var chr = document.getElementById("chr");
-var arm = document.getElementById("arm");
-var nov = document.getElementById("nov");
+
+var tbA = document.getElementById("tbA");
+var tbB = document.getElementById("tbB");
+var tbC = document.getElementById("tbC");
+var tbD = document.getElementById("tbD");
+var tbE = document.getElementById("tbE");
+var tbF = document.getElementById("tbF");
 var current_pool_name = " "
 //切换卡池
 function pool(id) {
@@ -20,6 +24,13 @@ function pool(id) {
         pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        
+        tbA.style.display="block";
+        tbB.style.display="none";
+        tbC.style.display="none";
+        tbD.style.display="none";
+        tbE.style.display="none";
+        tbF.style.display="none";
 
     } else if (id == 2) {
         pool2.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
@@ -29,6 +40,13 @@ function pool(id) {
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
 
+        tbA.style.display="none";
+        tbB.style.display="block";
+        tbC.style.display="none";
+        tbD.style.display="none";
+        tbE.style.display="none";
+        tbF.style.display="none";
+
     } else if (id == 3) {
         pool3.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
         pool1.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
@@ -36,6 +54,13 @@ function pool(id) {
         pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+
+        tbA.style.display="none";
+        tbB.style.display="none";
+        tbC.style.display="block";
+        tbD.style.display="none";
+        tbE.style.display="none";
+        tbF.style.display="none";
 
     }
     else if (id == 4) {
@@ -46,6 +71,13 @@ function pool(id) {
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
 
+        tbA.style.display="none";
+        tbB.style.display="none";
+        tbC.style.display="none";
+        tbD.style.display="block";
+        tbE.style.display="none";
+        tbF.style.display="none";
+
     }
     else if (id == 5) {
         pool5.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
@@ -55,6 +87,13 @@ function pool(id) {
         pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
 
+        tbA.style.display="none";
+        tbB.style.display="none";
+        tbC.style.display="none";
+        tbD.style.display="none";
+        tbE.style.display="block";
+        tbF.style.display="none";
+
     }
     else if (id == 6) {
         pool6.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
@@ -63,6 +102,13 @@ function pool(id) {
         pool3.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+
+        tbA.style.display="none";
+        tbB.style.display="none";
+        tbC.style.display="none";
+        tbD.style.display="none";
+        tbE.style.display="none";
+        tbF.style.display="block";
 
     }
     //show(showid);
@@ -110,6 +156,7 @@ function show(id) {
         r5.style.display = "none";
     }
 }
+
 //设置角色池UP角色或设置武器池定轨
 function setpool(name) {
     undo = document.getElementById("undo");
