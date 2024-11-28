@@ -290,7 +290,7 @@ $(function() {
         }else{
             crs = items.A['always'][Math.floor(Math.random() * items.A['always'].length)];
         }
-        if (poolname == 'B' && items.A['now-chr'].length != 0){
+        if (poolname == 'B' && items.B['now-chr'].length != 0){
             crs = items.B['now-chr'][Math.floor(Math.random() * items.B['now-chr'].length)];
         }else{
             crs = items.B['always'][Math.floor(Math.random() * items.B['always'].length)];
@@ -432,11 +432,23 @@ $(function() {
             return;
         } else if ($('#pool1').css("color") == "#FFFFFF") {
             poolname = 'A';
-        } else if ($('#arm').css("display") == "block") {
-            poolname = 'arm';
-        } else if ($('#nov').css("display") == "block") {
-            poolname = 'nov';
         }
+        else if ($('#pool2').css("color") == "#FFFFFF") {
+            poolname = 'B';
+        } 
+        else if ($('#pool3').css("color") == "#FFFFFF") {
+            poolname = 'C';
+        } 
+        else if ($('#pool4').css("color") == "#FFFFFF") {
+            poolname = 'D';
+        } 
+        else if ($('#pool5').css("color") == "#FFFFFF") {
+            poolname = 'E';
+        } 
+        else if ($('#pool6').css("color") == "#FFFFFF") {
+            poolname = 'F';
+        } 
+        
         gacha(poolname, 1);
     });
     //三连
