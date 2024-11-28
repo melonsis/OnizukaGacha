@@ -143,7 +143,7 @@ $(function() {
     //var AR4num = 0;
     //var NR5num = 0;
     //var NR4num = 0;
-    //var gachalog = {};
+    var gachalog = {};
     gachalog['chr'] = {};
     gachalog['arm'] = {};
     gachalog['nov'] = {};
