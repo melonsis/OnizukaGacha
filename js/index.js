@@ -144,9 +144,12 @@ $(function() {
     //var NR5num = 0;
     //var NR4num = 0;
     var gachalog = {};
-    gachalog['chr'] = {};
-    gachalog['arm'] = {};
-    gachalog['nov'] = {};
+    gachalog['A'] = {};
+    gachalog['B'] = {};
+    gachalog['C'] = {};
+    gachalog['D'] = {};
+    gachalog['E'] = {};
+    gachalog['F'] = {};
     for (var key in gachalog) {
         gachalog[key]['c'] = 0;
         gachalog[key]['r5c'] = 0;
@@ -331,8 +334,8 @@ $(function() {
                 //R5tbMain = "#CR5tbMain";
                 //R4tbMain = "#CR4tbMain";
                 id = 1;
-                gachalog['chr']['c'] = gachalog['chr']['c'] + 1;
-                num = gachalog['chr']['c'];
+                gachalog['A']['c'] = gachalog['A']['c'] + 1;
+                num = gachalog['A']['c'];
             } 
             $(AtbMain).after("<tr><td>" + num + "</td><td>" + rs.rank + "</td><td style='text-align:left'>" + rs.img + " " + rs.name + "</td></tr>");
             $.fn.setValue(id, "without");
