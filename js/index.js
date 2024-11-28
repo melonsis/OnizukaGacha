@@ -365,6 +365,7 @@ $(function() {
         $("[name='times']").html(gachalog[poolname]['c']);
         $("[name='up']").css('display', 'block');
         //可选，是否刷新UP物品数据
+        /*
         if (option != "without") {
             rs = askup(poolname);
             var upr5text = "";
@@ -407,7 +408,7 @@ $(function() {
             if (rs.upr5.length == 1) {
                 $.fn.choice(rs.upr5[0], poolname);
             }
-        }
+        }*/
     }
     
     //存储设置的UP角色或武器定轨到全局变量（通过$().choice供原生JS调用）
