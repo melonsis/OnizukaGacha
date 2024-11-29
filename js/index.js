@@ -515,7 +515,7 @@ $(function() {
         }
         
         $("[name='times']").html(gachalog[poolname]['c']);
-        $("[name='spend']").html((gachalog[poolname]['c'] * spend_oneshot )/100);
+        $("[name='spend']").html(Math.round((gachalog[poolname]['c'] * spend_oneshot )/100));
         $("[name='up']").css('display', 'block');
         //可选，是否刷新UP物品数据
         /*
