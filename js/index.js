@@ -486,36 +486,36 @@ $(function() {
     }
     //更新抽卡数据（通过$().setValue提供原生JS调用）
     $.fn.setValue = function(id, option) {
-        spend_oneshot = 0.6;
+        spend_oneshot = 60;
         if (id == 1) {
             poolname = 'A';
-            spend_oneshot = 0.6;
+            spend_oneshot = 60;
         } else if (id == 2) {
             poolname = 'B';
-            spend_oneshot = 1.9;
+            spend_oneshot = 190;
         } else if (id == 3) {
             poolname = 'C';
             spend_oneshot = 1;
         }
         else if (id == 4) {
             poolname = 'D';
-            spend_oneshot = 0.3;
+            spend_oneshot = 30;
         }
         else if (id == 5) {
             poolname = 'E';
-            spend_oneshot = 0.43;
+            spend_oneshot = 43;
         }
         else if (id == 6) {
             poolname = 'F';
-            spend_oneshot = 4.1;
+            spend_oneshot = 410;
         }
         else if (id == 7) {
             poolname = 'G';
-            spend_oneshot = 1.5;
+            spend_oneshot = 150;
         }
         
         $("[name='times']").html(gachalog[poolname]['c']);
-        $("[name='spend']").html((gachalog[poolname]['c'] * spend_oneshot * 100)/100);
+        $("[name='spend']").html((gachalog[poolname]['c'] * spend_oneshot )/100);
         $("[name='up']").css('display', 'block');
         //可选，是否刷新UP物品数据
         /*
