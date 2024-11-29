@@ -8,6 +8,7 @@ var tbE = document.getElementById("tbE");
 var tbF = document.getElementById("tbF");
 var tbG = document.getElementById("tbG");
 var poolname = 'A';
+var summon_result = document.getElementById("summon_result");
 
 //切换卡池
 function pool(id) {
@@ -19,6 +20,7 @@ function pool(id) {
     pool6 = document.getElementById("pool6");
     pool7 = document.getElementById("pool7");
     all = document.getElementById("Call-table");
+    summon_result.style.display="none";
 
     if (id == 1) {
         pool1.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
@@ -435,7 +437,7 @@ $(function() {
     function gacha(poolname, times) {
         $('#loading').css('display', 'block');
         i = 1;
-        res_str = "<div>"
+        res_str = " "
         while (i <= times) {
             rs = modi_action(poolname);
             if (poolname == 'A') {
@@ -485,9 +487,7 @@ $(function() {
             res_str += rs.nowimg
             i++;
         }
-        
-        summon_result = document.getElementById("summon_result");
-        summon_result.display="block";
+        summon_result.style.display="flex";
         summon_result.innerHTML = res_str;
         $('#loading').css('display', 'none');
     }

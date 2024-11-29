@@ -163,3 +163,8 @@ body{
     background-attachment: fixed; /* 背景图片固定 */
     background-position: center; /*图片居中对齐*/ 
 }
+.summon_result {
+    align-items:center;
+    justify-content:center;
+    gap: 10px;
+}
