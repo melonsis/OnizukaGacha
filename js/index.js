@@ -428,12 +428,14 @@ $(function() {
         result.rank = rank;
         result.img = "<div><img src=\"" + crs[0] + "\" style='hight:150px;width:150px' align='absmiddle'/>";
         result.name = crs[1];
+        result.nowimg = "<img src=\""+crs[0]+"\" style='hight:150px;width:150px' align='absmiddle'/>";
         return(result);
     }
     //向action()提交具体的抽卡请求，记录抽卡结果的同时，将抽卡结果呈现在用户界面
     function gacha(poolname, times) {
         $('#loading').css('display', 'block');
         i = 1;
+        res_str = "<div>"
         while (i <= times) {
             rs = modi_action(poolname);
             if (poolname == 'A') {
@@ -480,8 +482,13 @@ $(function() {
 
             $(AtbMain).after("<tr><td>" + num + "</td><td>" + rs.rank + "</td><td style='text-align:left'>" + rs.img + " " + rs.name + "</td></tr>");
             $.fn.setValue(id, "without");
+            res_str += rs.nowimg
             i++;
         }
+        
+        summon_result = document.getElementById("summon_result");
+        summon_result.display="block";
+        summon_result.innerHTML = res_str;
         $('#loading').css('display', 'none');
     }
     //更新抽卡数据（通过$().setValue提供原生JS调用）
