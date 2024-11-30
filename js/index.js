@@ -7,6 +7,7 @@ var tbD = document.getElementById("tbD");
 var tbE = document.getElementById("tbE");
 var tbF = document.getElementById("tbF");
 var tbG = document.getElementById("tbG");
+var tbH = document.getElementById("tbH");
 var poolname = 'A';
 var summon_result = document.getElementById("summon_result");
 
@@ -19,6 +20,7 @@ function pool(id) {
     pool5 = document.getElementById("pool5");
     pool6 = document.getElementById("pool6");
     pool7 = document.getElementById("pool7");
+    pool8 = document.getElementById("pool8");
     all = document.getElementById("Call-table");
     summon_result.style.display="none";
 
@@ -30,6 +32,7 @@ function pool(id) {
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool7.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool8.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         
         tbA.style.display="block";
         tbB.style.display="none";
@@ -38,6 +41,7 @@ function pool(id) {
         tbE.style.display="none";
         tbF.style.display="none";
         tbG.style.display="none";
+        tbH.style.display="none";
 
     } else if (id == 2) {
         pool2.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
@@ -47,6 +51,7 @@ function pool(id) {
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool7.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool8.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
 
         tbA.style.display="none";
         tbB.style.display="block";
@@ -55,6 +60,7 @@ function pool(id) {
         tbE.style.display="none";
         tbF.style.display="none";
         tbG.style.display="none";
+        tbH.style.display="none";
 
     } else if (id == 3) {
         pool3.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
@@ -64,6 +70,7 @@ function pool(id) {
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool7.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool8.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
 
         tbA.style.display="none";
         tbB.style.display="none";
@@ -72,6 +79,7 @@ function pool(id) {
         tbE.style.display="none";
         tbF.style.display="none";
         tbG.style.display="none";
+        tbH.style.display="none";
 
     }
     else if (id == 4) {
@@ -82,6 +90,7 @@ function pool(id) {
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool7.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool8.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
 
         tbA.style.display="none";
         tbB.style.display="none";
@@ -90,6 +99,7 @@ function pool(id) {
         tbE.style.display="none";
         tbF.style.display="none";
         tbG.style.display="none";
+        tbH.style.display="none";
 
     }
     else if (id == 5) {
@@ -100,6 +110,7 @@ function pool(id) {
         pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool7.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool8.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
 
         tbA.style.display="none";
         tbB.style.display="none";
@@ -108,6 +119,7 @@ function pool(id) {
         tbE.style.display="block";
         tbF.style.display="none";
         tbG.style.display="none";
+        tbH.style.display="none";
 
     }
     else if (id == 6) {
@@ -118,6 +130,7 @@ function pool(id) {
         pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool7.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool8.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
 
         tbA.style.display="none";
         tbB.style.display="none";
@@ -126,6 +139,7 @@ function pool(id) {
         tbE.style.display="none";
         tbF.style.display="block";
         tbG.style.display="none";
+        tbH.style.display="none";
 
     }
     else if (id == 7) {
@@ -136,6 +150,7 @@ function pool(id) {
         pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
         pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool8.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
 
         tbA.style.display="none";
         tbB.style.display="none";
@@ -144,7 +159,28 @@ function pool(id) {
         tbE.style.display="none";
         tbF.style.display="none";
         tbG.style.display="block";
+        tbH.style.display="none";
 
+
+    }
+    else if (id == 8) {
+        pool8.style = "border-width:0px;background:#FFB31E;color:#FFFFFF";
+        pool1.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool2.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool3.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool4.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool5.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool6.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+        pool7.style = "border-width:2px;background:rgba(255,255,255,0.8);color:#FFB31E";
+
+        tbA.style.display="none";
+        tbB.style.display="none";
+        tbC.style.display="none";
+        tbD.style.display="none";
+        tbE.style.display="none";
+        tbF.style.display="none";
+        tbG.style.display="none";
+        tbH.style.display="block";
 
     }
     //show(showid);
@@ -235,6 +271,7 @@ $(function() {
     gachalog['E'] = {};
     gachalog['F'] = {};
     gachalog['G'] = {};
+    gachalog['H'] = {};
     for (var key in gachalog) {
         gachalog[key]['c'] = 0;
         gachalog[key]['r5c'] = 0;
@@ -244,7 +281,7 @@ $(function() {
     //获取items.json包含的卡池数据
     var itemsdata = $.ajax({
         type: "get",
-        url: "items2.json",
+        url: "items.json",
         async: false,
         dataType: 'json'
     });
@@ -420,6 +457,13 @@ $(function() {
                     crs = items.G['always'][Math.floor(Math.random() * items.G['always'].length)];
                 }
                 break;
+            case 'H':
+                if (items.H['now-chr'].length != 0){
+                    crs = items.H['now-chr'][Math.floor(Math.random() * items.H['now-chr'].length)];
+                }else{
+                    crs = items.H['always'][Math.floor(Math.random() * items.H['always'].length)];
+                }
+                break;
             default:
                 console.error("未知 poolname: ", poolname);
                 return null;
@@ -481,6 +525,12 @@ $(function() {
                 gachalog['G']['c'] = gachalog['G']['c'] + 1;
                 num = gachalog['G']['c'];
             } 
+            else if (poolname == 'H') {
+                AtbMain = "#CGtbMain";
+                id = 8;
+                gachalog['H']['c'] = gachalog['H']['c'] + 1;
+                num = gachalog['H']['c'];
+            } 
 
             $(AtbMain).after("<tr><td>" + num + "</td><td>" + rs.rank + "</td><td style='text-align:left'>" + rs.img + " " + rs.name + "</td></tr>");
             $.fn.setValue(id, "without");
@@ -520,6 +570,11 @@ $(function() {
             poolname = 'G';
             spend_oneshot = 150;
         }
+        else if (id == 8) {
+            poolname = 'H';
+            spend_oneshot = 100;
+        }
+        
         
         $("[name='times']").html(gachalog[poolname]['c']);
         $("[name='spend']").html(Math.round((gachalog[poolname]['c'] * spend_oneshot )/100));
@@ -611,6 +666,9 @@ $(function() {
         else if ($('#pool7').css("color") == "#FFFFFF") {
             poolname = 'G';
         } 
+        else if ($('#pool8').css("color") == "#FFFFFF") {
+            poolname = 'H';
+        } 
 
         gacha(poolname, 1);
     });
@@ -639,6 +697,10 @@ $(function() {
         else if ($('#pool7').css("color") == "#FFFFFF") {
             poolname = 'G';
         } 
+        else if ($('#pool8').css("color") == "#FFFFFF") {
+            poolname = 'H';
+        } 
+
         gacha(poolname, 3);
     });
 });
