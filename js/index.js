@@ -526,7 +526,7 @@ $(function() {
                 num = gachalog['G']['c'];
             } 
             else if (poolname == 'H') {
-                AtbMain = "#CGtbMain";
+                AtbMain = "#CHtbMain";
                 id = 8;
                 gachalog['H']['c'] = gachalog['H']['c'] + 1;
                 num = gachalog['H']['c'];
